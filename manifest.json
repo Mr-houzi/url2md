@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "url2md",
+  "version": "0.1.0",
+  "description": "方便markdwon写作的小工具，复制url转成markdown格式",
+  "icons":
+  {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "background":
+  {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action":
+  {
+    "default_icon": "img/icon.png",
+    "default_title": "复制url转成markdown格式",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jquery-3.6.0.js", "js/content-script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions":
+  [
+    "contextMenus",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "homepage_url": "https://github.com",
+  "options_page": "options.html",
+  "options_ui":
+  {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}

@@ -33,3 +33,7 @@
 - 版本升级
 - 快捷键
 - 过滤title
+
+## License
+
+本项目基于 [MIT license](https://opensource.org/licenses/MIT).

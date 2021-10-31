@@ -28,6 +28,10 @@
 [Google's New Logo](https://www.google.com/doodles/googles-new-logo)
 ```
 
+## 感谢
+
+icon 来自[Ant Design 官方图标库](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.dc64b3430&cid=9402)
+
 ## TODO
 
 - 版本升级

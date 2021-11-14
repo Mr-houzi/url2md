@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "url2md",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "方便markdwon写作的小工具，复制url转成markdown格式",
   "icons":
   {

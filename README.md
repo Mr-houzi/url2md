@@ -4,7 +4,13 @@
 
 ## 如何安装
 
-由于暂未考虑上 chrome 商店，所以您可以将本仓库克隆到本地。在 chrome `扩展程序` -> `开发者模式` -> `加载已解压的扩展程序`，选中项目的根目录，即可安装成功。
+由于暂未考虑上 chrome 商店，所以您可以将本仓库克隆到本地。
+
+```
+git clone https://github.com/Mr-houzi/url2md
+```
+
+在 chrome `扩展程序` -> `开发者模式` -> `加载已解压的扩展程序`，选中项目的根目录，即可安装成功。
 
 ## 功能
 
@@ -27,6 +33,19 @@
 ```text
 [Google's New Logo](https://www.google.com/doodles/googles-new-logo)
 ```
+
+## 如何升级
+
+1.watch 本仓库，当有新版本发布时会收到 Github 推送的邮件。
+
+2.在项目目录下拉取更新。
+
+```
+git pull
+// or
+git pull origin 0.1.1
+```
+3.在 chrome `扩展程序`中找到`url2md`板块，点击重新加载代码按钮。
 
 ## 感谢
 

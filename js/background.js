@@ -1,8 +1,8 @@
-chrome.contextMenus.create({
+let parentId = chrome.contextMenus.create({
     title: "复制Url为Markdown格式",
     contexts: ["all"],
     onclick: function(clickData, tab){
-
+        // console.log(clickData, tab)
     }
 });
 
@@ -36,7 +36,11 @@ chrome.contextMenus.onClicked.addListener((clickData, tab) => {
                 let text = typeof(clickData.selectionText) == 'undefined' ? '未选中文字' : clickData.selectionText
                 md = `[${text}](${clickData.linkUrl})`
             } else {
-                md = `[${tab.title}](${tab.url})`
+                // 过滤title：(46 条消息) xxxx => xxxx
+                let title = tab.title
+                title = title.replace(/^\([^)]*\)/, '')
+                title = title.trim()
+                md = `[${title}](${tab.url})`
             }
 
             // alert(md)

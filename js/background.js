@@ -1,21 +1,10 @@
-let parentId = chrome.contextMenus.create({
+chrome.contextMenus.create({
     title: "复制Url为Markdown格式",
     contexts: ["all"],
     onclick: function(clickData, tab){
         // console.log(clickData, tab)
     }
 });
-
-// 复制到粘贴板
-function copy(text) {
-    var input = document.createElement('textarea');
-    document.body.appendChild(input);
-    input.value = text;
-    input.focus();
-    input.select();
-    document.execCommand('Copy');
-    input.remove();
-}
 
 chrome.contextMenus.onClicked.addListener((clickData, tab) => {
     chrome.tabs.executeScript(tab.id, {
@@ -36,14 +25,12 @@ chrome.contextMenus.onClicked.addListener((clickData, tab) => {
                 let text = typeof(clickData.selectionText) == 'undefined' ? '未选中文字' : clickData.selectionText
                 md = `[${text}](${clickData.linkUrl})`
             } else {
-                // 过滤title：(46 条消息) xxxx => xxxx
+                // 过滤title，eg：(46 条消息) xxxx => xxxx
                 let title = tab.title
-                title = title.replace(/^\([^)]*\)/, '')
-                title = title.trim()
+                title = title.replace(/^\([^)]*\)/, '').trim()
                 md = `[${title}](${tab.url})`
             }
 
-            // alert(md)
             copy(md)
         }
     });

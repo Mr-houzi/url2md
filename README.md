@@ -14,6 +14,8 @@ git clone https://github.com/Mr-houzi/url2md
 
 ## 功能
 
+### 右键菜单使用
+
 操作简单到只有一个操作，那就是在 chrome 中使用鼠标右键菜单选择 `复制url转成markdown格式`
 
 1.若是网页空白处进行的操作，将会提取本网页地址生成 markdown 格式的 url。
@@ -33,6 +35,10 @@ git clone https://github.com/Mr-houzi/url2md
 ```text
 [Google's New Logo](https://www.google.com/doodles/googles-new-logo)
 ```
+
+### 点击 icon 使用
+
+点击 icon 可以选择过滤后的多种 title。
 
 ## 如何升级
 
@@ -55,7 +61,6 @@ icon 来自[Ant Design 官方图标库](https://www.iconfont.cn/collections/deta
 
 - 版本升级
 - 快捷键
-- 过滤title
 
 ## License
 

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>popup</title>
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <div style="display: flex; align-items: center">
+        <img src="./img/icon.png">
+        <h1 style="margin-left: 20px">url2md</h1>
+    </div>
+    <h3>请选择要复制的 title</h3>
+    <div class="list" style="width: 200px">
+        <p style="font-size: 14px; padding-bottom: 10px; border-bottom: gray 1px dashed"
+           v-for="(item, index) in titleList" :key="index">
+            <input type="radio" name="list"
+                   style="vertical-align: middle;margin-top: -2px;margin-bottom: 1px;margin: 0px;padding: 0px;;"
+                   :value="item"
+                   @change="changeInput(index)"
+            >
+            {{item}}
+        </p>
+    </div>
+    <p style="padding-bottom: 10px;"><a href="https://github.com/Mr-houzi/url2md">使用文档</a></p>
+</div>
+
+<script src="./js/vue@2.6.14.js"></script>
+<script src="./js/helper.js"></script>
+<script src="./js/popup.js"></script>
+
+</body>
+</html>

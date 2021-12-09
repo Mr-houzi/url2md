@@ -18,6 +18,8 @@ git clone https://github.com/Mr-houzi/url2md
 
 操作简单到只有一个操作，那就是在 chrome 中使用鼠标右键菜单选择 `复制url转成markdown格式`
 
+![](./doc/img/url2md-demo1.gif)
+
 1.若是网页空白处进行的操作，将会提取本网页地址生成 markdown 格式的 url。
 
 ```text
@@ -38,7 +40,9 @@ git clone https://github.com/Mr-houzi/url2md
 
 ### 点击 icon 使用
 
-点击 icon 可以选择过滤后的多种 title。
+点击 icon 可以选择过滤后的多种 title，该方式使用会帮你过滤掉一些网站“不太优雅的小尾巴”。
+
+![](./doc/img/url2md-demo2.gif)
 
 ## 如何升级
 

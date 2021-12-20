@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         titleList: [],
         url: '',
+        showModal: false
     },
     created: function () {
         let _this = this
@@ -38,5 +39,11 @@ var app = new Vue({
             copy(`[${this.titleList[index]}](${this.url})`)
             window.close()
         },
+        clickSettingBtn() {
+            this.showModal = !this.showModal
+        },
+        clickModal() {
+            this.showModal = !this.showModal
+        }
     }
 })

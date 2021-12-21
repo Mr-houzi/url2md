@@ -3,10 +3,15 @@ var app = new Vue({
     data: {
         titleList: [],
         url: '',
-        showModal: false
+        showModal: false,
+        urlMode: 1,
     },
     created: function () {
         let _this = this
+
+        if (localStorage.getItem("urlMode")) {
+            this.urlMode = parseInt(localStorage.getItem("urlMode"))
+        }
 
         chrome.tabs.getSelected(function(tab){
             _this.url = tab.url
@@ -35,7 +40,10 @@ var app = new Vue({
     },
     methods: {
         changeInput(index) {
-            // 复制到粘贴板
+            if (this.urlMode === 1) {
+                this.url = formatUrl(this.url)
+            }
+
             copy(`[${this.titleList[index]}](${this.url})`)
             window.close()
         },
@@ -44,6 +52,10 @@ var app = new Vue({
         },
         clickModal() {
             this.showModal = !this.showModal
+        },
+        changeSettingRadio(value) {
+            this.urlMode = value
+            localStorage.setItem('urlMode', value)
         }
     }
 })

@@ -16,19 +16,28 @@ chrome.contextMenus.onClicked.addListener((clickData, tab) => {
         if (chrome.runtime.lastError) {
             console.error('Error: ' + chrome.runtime.lastError.message);
         } else {
-
-            let md = ''
+            let title = ''
+            let url = ''
             if (clickData.mediaType === 'image') {
-                let altText = typeof(result) == 'undefined' ? '' : result
-                md = `![${altText}](${clickData.srcUrl})`
+                // alt text
+                title = typeof(result) == 'undefined' ? '' : result
+                url = clickData.srcUrl
             } else if (typeof(clickData.linkUrl) !== 'undefined') {
-                let text = typeof(clickData.selectionText) == 'undefined' ? '未选中文字' : clickData.selectionText
-                md = `[${text}](${clickData.linkUrl})`
+                title = typeof(clickData.selectionText) == 'undefined' ? '未选中文字' : clickData.selectionText
+                url = clickData.linkUrl
             } else {
                 // 过滤title，eg：(46 条消息) xxxx => xxxx
-                let title = tab.title
-                title = title.replace(/^\([^)]*\)/, '').trim()
-                md = `[${title}](${tab.url})`
+                title = tab.title.replace(/^\([^)]*\)/, '').trim()
+                url = tab.url
+            }
+
+            let urlMode = parseInt(localStorage.getItem("urlMode"))
+            let md = ''
+
+            if (urlMode === 1) {
+                md = `[${title}](${formatUrl(url)})`
+            } else {
+                md = `[${title}](${url})`
             }
 
             copy(md)

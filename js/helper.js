@@ -8,3 +8,8 @@ function copy(text) {
     document.execCommand('Copy');
     input.remove();
 }
+
+// 保留url中的unicode字符，利用%20代替空格
+function formatUrl(url) {
+    return decodeURI(url).replaceAll(" ", "%20")
+}

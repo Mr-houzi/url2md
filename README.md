@@ -42,7 +42,29 @@ git clone https://github.com/Mr-houzi/url2md
 
 点击 icon 可以选择过滤后的多种 title，该方式使用会帮你过滤掉一些网站“不太优雅的小尾巴”。
 
+```text
+// origin
+[(35 条消息) 有哪有优秀的golang库？ - 知乎](https://www.zhihu.com/question/63974075/answer/2268869183)
+
+// transform
+[有哪有优秀的golang库？ - 知乎](https://www.zhihu.com/question/63974075/answer/2268869183)
+[有哪有优秀的golang库？](https://www.zhihu.com/question/63974075/answer/2268869183)
+```
+
 ![](./doc/img/url2md-demo2.gif)
+
+### url 设置
+
+- 保留Unicode字符（默认）
+- Unicode字符将被编码
+
+```text
+// 保留Unicode字符（默认）
+[三体III：死神永生 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/三体III：死神永生)
+
+//Unicode字符将被编码
+[三体III：死神永生 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E4%B8%89%E4%BD%93III%EF%BC%9A%E6%AD%BB%E7%A5%9E%E6%B0%B8%E7%94%9F)
+```
 
 ## 如何升级
 
@@ -53,7 +75,7 @@ git clone https://github.com/Mr-houzi/url2md
 ```
 git pull
 // or
-git pull origin 0.1.1
+git pull origin v1.0.1
 ```
 3.在 chrome `扩展程序`中找到`url2md`板块，点击重新加载代码按钮。
 

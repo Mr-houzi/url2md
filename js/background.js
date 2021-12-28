@@ -18,10 +18,12 @@ chrome.contextMenus.onClicked.addListener((clickData, tab) => {
         } else {
             let title = ''
             let url = ''
+            let isImg = false
             if (clickData.mediaType === 'image') {
                 // alt text
                 title = typeof(result) == 'undefined' ? '' : result
                 url = clickData.srcUrl
+                isImg = true
             } else if (typeof(clickData.linkUrl) !== 'undefined') {
                 title = typeof(clickData.selectionText) == 'undefined' ? '未选中文字' : clickData.selectionText
                 url = clickData.linkUrl
@@ -34,10 +36,14 @@ chrome.contextMenus.onClicked.addListener((clickData, tab) => {
             let urlMode = parseInt(localStorage.getItem("urlMode"))
             let md = ''
 
+            if (isImg) {
+                md += '!'
+            }
+
             if (urlMode === 1) {
-                md = `[${title}](${formatUrl(url)})`
+                md += `[${title}](${formatUrl(url)})`
             } else {
-                md = `[${title}](${url})`
+                md += `[${title}](${url})`
             }
 
             copy(md)

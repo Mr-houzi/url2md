@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "url2md",
-  "version": "1.0.0",
-  "description": "方便markdwon写作的小工具，复制url转成markdown格式",
+  "version": "1.1.0",
+  "description": "Copy & Convert Url to Markdown format - 方便markdwon写作的小工具，复制url转成markdown格式",
   "icons":
   {
     "16": "img/icon.png",
@@ -31,8 +31,6 @@
   [
     "contextMenus",
     "tabs",
-    "webRequest",
-    "webRequestBlocking",
     "storage",
     "http://*/*",
     "https://*/*"

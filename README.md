@@ -4,11 +4,7 @@
 
 ## 如何安装
 
-由于暂未考虑上 chrome 商店，所以您可以将本仓库克隆到本地。
-
-```
-git clone https://github.com/Mr-houzi/url2md
-```
+[download](https://github.com/Mr-houzi/url2md/releases)
 
 在 chrome `扩展程序` -> `开发者模式` -> `加载已解压的扩展程序`，选中项目的根目录，即可安装成功。
 

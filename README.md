@@ -1,10 +1,35 @@
 # url2md
 
+<p >
+    <a href="">
+        <img src="https://badgen.net/github/release/mr-houzi/url2md/stable">
+    </a>
+    <a href="">
+        <img src="https://badgen.net/github/stars/mr-houzi/url2md">
+    </a>
+    <!-- <a href="">
+        <img src="https://badgen.net/github/assets-dl/mr-houzi/url2md">
+    </a> -->
+    <a href="">
+        <img src="https://badgen.net//chrome-web-store/v/ecdciemleflfmjghiimgklihlfimhocm">
+    </a>
+    <a href="">
+        <img src="https://badgen.net//chrome-web-store/stars/ecdciemleflfmjghiimgklihlfimhocm">
+    </a>
+    <a href="">
+        <img src="https://badgen.net/github/license/mr-houzi/url2md">
+    </a>
+</p >
+
 方便 markdwon 快速写作的小工具，复制 url 转成 markdown 格式的 chrome 插件。
 
 ## 如何安装
 
-[download](https://github.com/Mr-houzi/url2md/releases)
+[chrome web store](https://chrome.google.com/webstore/detail/url2md/ecdciemleflfmjghiimgklihlfimhocm)
+
+or
+
+[releases download](https://github.com/Mr-houzi/url2md/releases)
 
 在 chrome `扩展程序` -> `开发者模式` -> `加载已解压的扩展程序`，选中项目的根目录，即可安装成功。
 
@@ -78,11 +103,6 @@ git pull origin v1.0.1
 ## 感谢
 
 icon 来自[Ant Design 官方图标库](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.dc64b3430&cid=9402)
-
-## TODO
-
-- 版本升级
-- 快捷键
 
 ## License
 

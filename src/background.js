@@ -7,7 +7,7 @@ browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'copy',
-    title: "复制Url为Markdown格式",
+    title: "url2md: 复制Url为Markdown格式",
     contexts: ["all"],
     // onclick: function(clickData, tab){
     //   // console.log(clickData, tab)

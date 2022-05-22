@@ -3,12 +3,16 @@
   "name": "__MSG_extName__",
   "homepage_url": "https://github.com/Mr-houzi/url2md",
   "description": "Copy & Convert Url to Markdown format - 方便markdwon写作的小工具，复制url转成markdown格式",
-  "default_locale": "en",
+  "default_locale": "zh_CN",
   "permissions": [
     "contextMenus",
     "tabs",
     "storage",
-    "scripting"
+    "scripting",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "*://*/*"
   ],
   "icons": {
     "16": "icons/logo.png",
@@ -17,8 +21,17 @@
   },
   "background":
   {
-    "service_worker": "js/background.js"
+    "service_worker": "js/background.js",
+    "type": "module"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["js/content1.js"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_title": "__MSG_extName__",

@@ -96,39 +96,14 @@ export default {
         _this.titleList.push(title)
         _this.titleList.push(originTitle)
     })
-
-    // chrome.tabs.getSelected(function(tab){
-    //     _this.url = tab.url
-    //     let originTitle = tab.title
-    //     let title = originTitle.replace(/^\([^)]*\)/, '').trim()
-    //     let mainSep = '-'
-    //     let otherSepList = ["_", "\\|", "·"]
-    //     let regex = otherSepList.join('|')
-    //     regex = new RegExp(regex, "g")
-    //     title = title.replace(regex, '-')
-    //
-    //     let sepIndexs = []
-    //     for(let i = 0; i < title.length; i++) {
-    //         if (title[i] === mainSep) {
-    //             sepIndexs.push(i)
-    //         }
-    //     }
-    //     for (let i = 0; i < sepIndexs.length; i++) {
-    //         let tmp = title.substr(0, sepIndexs[i])
-    //         _this.titleList.push(tmp.trim())
-    //     }
-    //
-    //     _this.titleList.push(title)
-    //     _this.titleList.push(originTitle)
-    // })
   },
   methods: {
-    changeInput(index) {
+    async changeInput(index) {
       if (this.urlMode === 1) {
         this.url = helper.formatUrl(this.url)
       }
 
-      helper.copy(`[${this.titleList[index]}](${this.url})`)
+      await navigator.clipboard.writeText(`[${this.titleList[index]}](${this.url})`)
       window.close()
     },
     clickSettingBtn() {

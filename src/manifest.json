@@ -8,7 +8,6 @@
     "contextMenus",
     "tabs",
     "storage",
-    "scripting",
     "clipboardWrite"
   ],
   "host_permissions": [

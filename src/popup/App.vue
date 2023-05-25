@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
 <!--  <hello-world />-->
   <div>
     <div style="display: flex; align-items: center">
@@ -7,15 +7,17 @@
     </div>
     <h3>请选择要复制的 title</h3>
     <div class="list" style="width: 200px">
-      <p class="radio-item"
+      <label class="radio-item"
          style="font-size: 14px"
+         :for="'radio-btn-' + index"
          v-for="(item, index) in titleList" :key="index">
         <input type="radio" name="list"
+               :id="'radio-btn-' + index"
                :value="item"
                @change="changeInput(index)"
         >
         {{item}}
-      </p>
+      </label>
     </div>
     <p style="padding-bottom: 10px;">
       <a target="_blank" href="https://github.com/Mr-houzi/url2md">文档</a>
@@ -29,20 +31,20 @@
     <div class="modal-mask" v-show="showModal" @click="clickModal"></div>
     <div class="setting-modal" v-show="showModal">
       <h3>url 设置</h3>
-      <p class="radio-item">
-        <input type="radio" name="urlMode"
+      <label class="radio-item" for="settingRadio0">
+        <input type="radio" name="urlMode" id="settingRadio0"
                @change="changeSettingRadio(0)"
                :checked="urlMode === 0"
         >
         Unicode字符将被编码
-      </p>
-      <p class="radio-item">
-        <input type="radio" name="urlMode"
+      </label>
+      <label class="radio-item" for="settingRadio1">
+        <input type="radio" name="urlMode" id="settingRadio1"
                @change="changeSettingRadio(1)"
                :checked="urlMode === 1"
         >
         保留Unicode字符
-      </p>
+      </label>
     </div>
   </div>
 </template>
@@ -104,7 +106,8 @@ export default {
       }
 
       await navigator.clipboard.writeText(`[${this.titleList[index]}](${this.url})`)
-      window.close()
+      this.$set(this.titleList, index, "已复制 √")
+      setTimeout(window.close, 500)
     },
     clickSettingBtn() {
       this.showModal = !this.showModal
@@ -142,7 +145,9 @@ html, body {
   background: rgba(0, 0, 0, 0.5);
 }
 .radio-item {
+  display: block;
   font-size: 12px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: gray 1px dashed;
 }

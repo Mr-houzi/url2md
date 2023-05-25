@@ -11,10 +11,10 @@
         <img src="https://badgen.net/github/assets-dl/mr-houzi/url2md">
     </a> -->
     <a href="">
-        <img src="https://badgen.net//chrome-web-store/v/ecdciemleflfmjghiimgklihlfimhocm">
+        <img src="https://badgen.net/chrome-web-store/v/ecdciemleflfmjghiimgklihlfimhocm">
     </a>
     <a href="">
-        <img src="https://badgen.net//chrome-web-store/stars/ecdciemleflfmjghiimgklihlfimhocm">
+        <img src="https://badgen.net/chrome-web-store/stars/ecdciemleflfmjghiimgklihlfimhocm">
     </a>
     <a href="">
         <img src="https://badgen.net/github/license/mr-houzi/url2md">

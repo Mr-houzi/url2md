@@ -21,6 +21,8 @@
     </a>
 </p >
 
+[English](./readme-en.md) | 简体中文
+
 方便 markdwon 快速写作的小工具，复制 url 转成 markdown 格式的 chrome 插件。
 
 ## 如何安装
@@ -37,7 +39,7 @@ or
 
 ### 右键菜单使用
 
-操作简单到只有一个操作，那就是在 chrome 中使用鼠标右键菜单选择 `复制url转成markdown格式`
+操作简单到只有一步操作，那就是在 chrome 中使用鼠标右键菜单选择 `复制url转成markdown格式`
 
 ![](./doc/img/url2md-demo1.gif)
 
@@ -86,19 +88,6 @@ or
 //Unicode字符将被编码
 [三体III：死神永生 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E4%B8%89%E4%BD%93III%EF%BC%9A%E6%AD%BB%E7%A5%9E%E6%B0%B8%E7%94%9F)
 ```
-
-## 如何升级
-
-1.watch 本仓库，当有新版本发布时会收到 Github 推送的邮件。
-
-2.在项目目录下拉取更新。
-
-```
-git pull
-// or
-git pull origin v1.0.1
-```
-3.在 chrome `扩展程序`中找到`url2md`板块，点击重新加载代码按钮。
 
 ## 感谢
 

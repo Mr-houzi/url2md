@@ -21,6 +21,8 @@
     </a>
 </p >
 
+English | [简体中文](./README.md)
+
 A small tool for convenient markdown writing. It is a Chrome extension that converts copied URLs to markdown format.
 
 ## How to Install

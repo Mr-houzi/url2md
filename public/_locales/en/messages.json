@@ -2,5 +2,33 @@
   "extName": {
     "message": "url2md",
     "description": "Copy & Convert Url to Markdown format"
+  },
+  "rightClickBtnText": {
+    "message": "Convert url to markdown format",
+    "description": ""
+  },
+  "selectTitle": {
+    "message": "Please select the title to copy",
+    "description": ""
+  },
+  "doc": {
+    "message": "doc",
+    "description": ""
+  },
+  "feedback": {
+    "message": "feedback",
+    "description": ""
+  },
+  "urlSetting": {
+    "message": "url setting",
+    "description": ""
+  },
+  "unicodeEncode": {
+    "message": "encode",
+    "description": ""
+  },
+  "unicodeRaw": {
+    "message": "raw",
+    "description": ""
   }
 }

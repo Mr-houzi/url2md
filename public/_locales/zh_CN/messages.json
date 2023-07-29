@@ -2,5 +2,33 @@
   "extName": {
     "message": "url2md",
     "description": "方便markdwon写作的小工具，复制url转成markdown格式"
+  },
+  "rightClickBtnText": {
+    "message": "复制Url为Markdown格式",
+    "description": ""
+  },
+  "selectTitle": {
+    "message": "请选择要复制的 title",
+    "description": ""
+  },
+  "doc": {
+    "message": "文档",
+    "description": ""
+  },
+  "feedback": {
+    "message": "反馈",
+    "description": ""
+  },
+  "urlSetting": {
+    "message": "url 设置",
+    "description": ""
+  },
+  "unicodeEncode": {
+    "message": "Unicode字符将被编码",
+    "description": ""
+  },
+  "unicodeRaw": {
+    "message": "保留Unicode字符",
+    "description": ""
   }
 }

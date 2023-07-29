@@ -3,11 +3,12 @@ import helper from './helper.js';
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   console.log('Hello from the background')
 })
+let btnText = browser.i18n.getMessage('rightClickBtnText')
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'copy',
-    title: "url2md: 复制Url为Markdown格式",
+    title: "url2md:" + btnText,
     contexts: ["all"],
     // onclick: function(clickData, tab){
     //   // console.log(clickData, tab)

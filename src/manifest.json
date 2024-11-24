@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "__MSG_extName__ - Copy url as markdown format",
+  "name": "url2md - Copy url as markdown format",
   "homepage_url": "https://github.com/Mr-houzi/url2md",
   "description": "Copy & Convert Url to Markdown format - 方便markdwon写作的小工具，复制url转成markdown格式",
   "default_locale": "zh_CN",
